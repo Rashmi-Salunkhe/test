@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Languages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #8c8a8a;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #c7cdec;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .checkbox-group label {
+            margin-right: 10px;
+        }
+
+        button[type="submit"] {
+            background-color: #329ad2;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #da5fed;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            form {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            input[type="text"],
+            input[type="email"],
+            input[type="number"] {
+                font-size: 14px;
+            }
+
+            button[type="submit"] {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Programming Languages Survey</h1>
+    <form id="surveyForm" action="#" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" pattern="[A-Za-z\s]+" maxlength="50" title="Alphabetic characters only" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="18" max="100" required>
+
+        <label>Top Three Favorite Programming Languages:</label>
+        <div class="checkbox-group">
+            <input type="checkbox" id="java" name="languages[]" value="Java">
+            <label for="java">Java</label>
+            <input type="checkbox" id="python" name="languages[]" value="Python">
+            <label for="python">Python</label>
+            <input type="checkbox" id="javascript" name="languages[]" value="JavaScript">
+            <label for="javascript">JavaScript</label>
+            <input type="checkbox" id="csharp" name="languages[]" value="C#">
+            <label for="csharp">C#</label>
+            <input type="checkbox" id="php" name="languages[]" value="PHP">
+            <label for="php">PHP</label>
+            <input type="checkbox" id="cpp" name="languages[]" value="C++">
+            <label for="cpp">C++</label>
+            <input type="checkbox" id="go" name="languages[]" value="Go">
+            <label for="go">Go</label>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    
+</body>
+</html>
